@@ -150,7 +150,9 @@ function parseParameters(args) {
     } else if (value === 'false') {
       value = false
     }
-
+    else if (value.match(/^[0-9-]+$/)) {
+      value = parseInt(value)
+    }
     params[name] = value
   })
 
