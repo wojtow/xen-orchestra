@@ -151,6 +151,9 @@ function parseParameters(args) {
       value = false
     }
 
+    if (value.match(/^[0-9-]+$/)) {
+      value = parseInt(value)
+    }
     params[name] = value
   })
 
